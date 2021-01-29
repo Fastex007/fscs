@@ -1,0 +1,83 @@
+div.page-body-wrap{
+	position: relative;
+	display: table;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+div.content-wrap{
+	position: relative;
+	width: 60%;
+	margin: 0 auto;
+}
+
+div.left-menu{
+	height: 100vh;
+	width: 280px;
+	background-color: #FFFFFF;
+	border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+div.left-menu-wrap{
+	padding-top: 30px;
+	padding-left: 30px;
+	padding-right: 10px;
+	position: relative;
+}
+
+div.left-menu-inner{
+	position: fixed;
+}
+
+ul.lm-item-list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li.lm-item{
+	position: relative;
+	font-family: 'Alegreya', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+	color: #191D1E;
+}
+
+ul.lm-subitem-list{
+    margin: 0;
+    margin-top: 15px;
+    padding: 0;
+    list-style: none;
+}
+
+li.lm-subitem{
+	padding-left: 15px;
+	margin-top: 10px;
+	padding-right: 45px;
+}
+
+li.lm-subitem:hover{
+	border-right: 2px solid red;
+}
+
+div.item-icon{
+	position: relative;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+	background-image: url("./images/data_table_icon.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+div.item-text{
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 5px;
+	font-family: 'Alegreya', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+	color: #505050;
+}

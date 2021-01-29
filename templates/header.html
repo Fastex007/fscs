@@ -1,0 +1,41 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'base/css/header_style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'base/css/user_drop_menu_style.css' %}">
+<script src="{% static 'base/js/user_drop_menu.js' %}"></script>
+
+<div class="header">
+    <div class="header-main">
+        <div class="header-logo">
+            <div class="logo"></div>
+        </div>
+        <div class="top-nav">
+            <div class="top-nav-wrap">
+                <div class="top-nav-inner">
+                    <ul class="top-nav-item-list">
+                        <li class="top-nav-item">Статистика</li>
+                        <li class="top-nav-item">Записи</li>
+                        <li class="top-nav-item">Таблицы</li>
+                        <li class="top-nav-item">Отчёты</li>
+                        <li class="top-nav-item">Инструменты</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header-user">
+            <div class="header-user-wrap">
+                <div class="user-pic"></div>
+                <div onclick="ShowDrop()" class="username">
+                    {% if user.is_authenticated %}
+                        {{ user.get_surname_initial }}
+                          <div id="drop-down-menu" class="dropdown-content">
+                              <a href="/admin/">Панель управления</a>
+                            <a href="/auth/logout/">Выйти</a>
+                          </div>
+                    {% else %}
+                        Войти
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

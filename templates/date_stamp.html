@@ -1,0 +1,15 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'base/css/date_stamp_style.css' %}">
+
+<div class="stamp-wrap">
+    <div class="create-edit-stamp">
+        <div class="created-stamp">
+            Создано: {{ac_type.created_at}} | {{ac_type.created_by.username}}
+        </div>
+        {% if ac_type.edited_by.username != None %}
+            <div class="edited-stamp">
+                Изменено: {{ac_type.edited_at}} | {{ac_type.edited_by.username}}
+            </div>
+        {% endif %}
+    </div>
+</div>

@@ -1,0 +1,35 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block inner_content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/aircraft_types_list_style.css' %}">
+    <div class="model-content">
+        <div class="model-name">
+            {{ model_caption }}
+        </div>
+        {% for aircraft in aircrafts %}
+        <div class="model-item">
+            <div class="ac-type-caption">
+                {{ aircraft.registration_number }}
+            </div>
+            <div class="second_line">
+                    {{ aircraft.type.name }}
+            </div>
+                {% load static %}
+                <link rel="stylesheet" type="text/css" href="{% static 'base/css/date_stamp_style.css' %}">
+
+                <div class="stamp-wrap">
+                    <div class="create-edit-stamp">
+                        <div class="created-stamp">
+                            Создано: {{aircraft.created_at}} | {{aircraft.created_by.username}}
+                        </div>
+                        {% if aircrafts.edited_by.username != None %}
+                            <div class="edited-stamp">
+                                Изменено: {{aircraft.edited_at}} | {{aircraft.edited_by.username}}
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

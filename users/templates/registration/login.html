@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Вход в систему</title>
+
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static "users/css/login_animation.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "users/css/login_style.css" %}">
+	<script src="{% static "users/js/jquery-1.10.1.min.js" %}"></script>
+	<link rel="stylesheet" href="{% static "users/css/normalize.min.css" %}">
+	<script src="{% static "users/js/easeljs-0.7.1.min.js" %}"></script>
+	<script src="{% static "users/js/TweenMax.min.js" %}"></script>
+
+</head>
+<body>
+	<canvas id="projector"></canvas>
+    <script  src="{% static "users/js/login_bg_script.js" %}"></script>
+	
+	<script>
+		$('#BBb').click(function() {
+			$(ts).addClass("fadeIn");
+		});
+	</script>
+    {% load user_filters %}
+	<form method="post" action="{% url 'login' %}" id="login-form" class="expandOpen fadeIn">
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ next }}">
+        <p class="login-caption">Авторизация</p>
+
+            {{ form.username|add_class:'login-input' }}
+            {{ form.password|add_class:'password-input' }}
+
+        <a href="#" class="login-button" onclick="document.getElementById('login-form').submit(); return false;">Войти</a>
+        <script src="{% static "users/js/submit_by_enter.js" %}"></script>
+        {% if form.errors %}
+			<div class="message-box" role="alert">
+			  Неверные имя пользователя или пароль
+			</div>
+        {% endif %}
+	</form>
+	
+</body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'base/css/base_style.css' %}">
+	<title>{% block title %}FSCS{% endblock %}</title>
+</head>
+<body>
+    {% include 'header.html' %}
+    {% block pagebody %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,11 @@
+{% extends 'page_body.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index_style.css' %}">
+    <div class="page-body-wrap">
+        <div class="content-wrap">
+            {% block inner_content %}
+            {% endblock %}
+        </div>
+    </div>
+{% endblock %}

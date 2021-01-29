@@ -1,0 +1,32 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block inner_content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/aircraft_types_list_style.css' %}">
+    <div class="model-content">
+        <div class="model-name">
+            {{ model_caption }}
+        </div>
+        {% for ac_type in ac_types %}
+        <div class="model-item">
+            <div class="ac-type-caption">
+                {{ ac_type.name }} ({{ ac_type.types.count }})
+            </div>
+                {% load static %}
+                <link rel="stylesheet" type="text/css" href="{% static 'base/css/date_stamp_style.css' %}">
+
+                <div class="stamp-wrap">
+                    <div class="create-edit-stamp">
+                        <div class="created-stamp">
+                            Создано: {{ac_type.created_at}} | {{ac_type.created_by.username}}
+                        </div>
+                        {% if ac_type.edited_by.username != None %}
+                            <div class="edited-stamp">
+                                Изменено: {{ac_type.edited_at}} | {{ac_type.edited_by.username}}
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

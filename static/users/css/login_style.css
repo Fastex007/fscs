@@ -1,0 +1,104 @@
+html{
+	overflow: hidden;
+	background: #191d1e;
+	background: -moz-linear-gradient(0deg,  #2E3537 50%, #2A3845 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(50%,#191d1e), color-stop(100%,#2A3845)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(0deg,  #191d1e 50%,#2A3845 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(0deg,  #191d1e 50%,#2A3845 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(0deg,  #191d1e 50%,#2A3845 100%); /* IE10+ */
+	background: linear-gradient(0deg,  #191d1e 50%,#2A3845 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#191d1e', endColorstr='#2A3845',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	background-attachment: fixed
+}
+
+body{
+	width:100%; 
+	height:100%; 
+	padding:0px; 
+	margin:0px;
+}
+#login-form{
+	position: absolute;
+	top:calc(50% - 125px);
+	left:calc(50% - 150px);
+	
+	width: 300px;
+	background-color: rgba(0,75,100,0.1);
+	box-shadow: 0 0 10px rgba(0,0,0,0.5); 
+	padding: 5px;
+	border-radius: 5px;
+}
+
+p.login-caption{
+	font-family: "Arial";
+	font-size: 20px;
+	color: #E0EBDF;
+	font-style: initial;
+	text-align: center;
+}
+
+::-webkit-input-placeholder {
+  color: rgba(224, 235, 223,0.6);
+  font-family: "Arial";
+  font-size: 17px;
+}
+
+.login-input, .password-input{
+	border: none;
+	width: calc(100% - 20px);
+	padding: 10px;
+	margin-bottom: 10px;
+ 	background: transparent;
+    border: none;
+    border-bottom: 1px solid #FFFFFF;
+	font-family: "Arial";
+	font-size: 18px;
+	color: #FFFFFF;
+	font-style: initial;
+	outline: none;
+}
+
+a.login-button {
+	width: 90px;
+	text-align: center;
+	display: block;
+	font-family: arial;
+	text-decoration: none;
+	font-weight: 300;
+	font-size: 14px;
+	border: #FFFFFF 1px solid;
+	color: #E7FFE5;
+	padding: 3px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin: 20px auto;
+	transition: .5s;
+	border-radius: 0px;
+}
+a.login-button:hover {
+	top: 5px;
+	transition: .5s;
+	color: #10FF58;
+	border: #10FF58 1px solid;
+	border-radius: 10px;
+}
+a.login-button:active {
+  color: #191d1e;
+  border: #FFFFFF 1px solid;
+  transition: .07s;
+  background-color: #E7FFE5;
+}
+
+div.message-box{
+	color: #FF7F7FFF;
+	font-style: initial;
+	text-align: center;
+}
+
+#projector {
+	position: absolute; 
+	top: 0px;
+	left: 0px;
+	width:100%;
+	height:100%;
+} 

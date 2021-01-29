@@ -1,0 +1,36 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block inner_content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/aircraft_types_list_style.css' %}">
+    <div class="model-content">
+        <div class="model-name">
+            {{ model_caption }}
+            {{ airport }}
+        </div>
+        {% for airport in airports %}
+        <div class="model-item">
+            <div class="ac-type-caption">
+                {{ airport.name }}
+            </div>
+            <div class="second_line">
+                    {{ airport.iata_code }} | {{ airport.icao_code }}
+            </div>
+                {% load static %}
+                <link rel="stylesheet" type="text/css" href="{% static 'base/css/date_stamp_style.css' %}">
+
+                <div class="stamp-wrap">
+                    <div class="create-edit-stamp">
+                        <div class="created-stamp">
+                            Создано: {{airport.created_at}} | {{airport.created_by.username}}
+                        </div>
+                        {% if aircrafts.edited_by.username != None %}
+                            <div class="edited-stamp">
+                                Изменено: {{airport.edited_at}} | {{airport.edited_by.username}}
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

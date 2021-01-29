@@ -1,0 +1,24 @@
+.dropdown-content {
+    display: none;
+    position: absolute;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    text-align: left;
+    margin-top: 27px;
+    right: 0;
+    left: 0;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 10px;
+    text-decoration: none;
+    display: block;
+    font-weight: 300;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.show {display: block;}

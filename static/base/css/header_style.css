@@ -1,0 +1,107 @@
+div.header{
+	flex: 0 0 auto;
+}
+
+div.header-main{
+	position: relative;
+	z-index: 10;
+	display: table;
+	box-sizing: border-box;
+	width: 100%;
+	height: 75px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	background: #FFFFFF;
+	font-family: 'Alegreya', sans-serif;
+    font-size: 17px;
+    color: #191D1E;
+}
+
+div.header-logo{
+	display: flex;
+	vertical-align: top;
+	white-space: nowrap;
+}
+
+div.logo{
+	vertical-align: middle;
+	margin-left: 30px;
+	width: 70px;
+	height: 70px;
+	margin-top: 2px;
+	background-image: url('../img/logo.png');
+}
+
+div.top-nav{
+	display: table-cell;
+	width: 100%;
+	vertical-align: top;
+	white-space: nowrap;
+}
+
+div.top-nav-wrap{
+	padding-top: 28px;
+	text-align: center;
+}
+
+div.top-nav-inner{
+	position: relative;
+}
+
+ul.top-nav-item-list{
+	margin: 0 40px;
+	padding: 0;
+	list-style: none;
+}
+
+li.top-nav-item{
+	position: relative;
+	display: inline-block;
+	height: 15px;
+	padding-bottom: 29px;
+	margin-left: 30px;
+}
+
+li.top-nav-item:hover{
+	border-bottom: 2px solid #CC3434;
+	cursor: pointer;
+}
+
+div.header-user{
+	display: table-cell;
+	text-align: right;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+div.header-user:hover{
+	cursor: pointer;
+	border-bottom: 2px solid #CC3434;
+}
+
+div.header-user-wrap{
+	position: relative;
+	z-index: 0;
+	display: inline-block;
+	white-space: nowrap;
+	margin-right: 25px;
+}
+
+div.user-pic{
+	position: relative;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+	background-image: url('../img/profile.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+div.username{
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 3px;
+	font-weight: 600;
+	margin-top: 5px;
+	z-index: 1;
+}
